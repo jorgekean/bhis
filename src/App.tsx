@@ -23,6 +23,8 @@ import HealthRecordDetailPage from './pages/HealthRecordDetailPage';
 // import SettingsPage from './pages/SettingsPage';
 
 import ResidentHealthHistoryPage from './pages/ResidentHealthHistoryPage';
+import LoginPageEmailPW from './pages/LoginPageEmailPW';
+import ConditionalLoginPage from './pages/ConditionalLoginPage';
 
 /**
  * PrivateRoute component to protect routes that require authentication.
@@ -89,7 +91,7 @@ const App: React.FC = () => {
         {user && <Navbar />}
         <main className="flex-grow pt-16 pb-16 sm:pb-0">
           <Routes>
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/login" element={<ConditionalLoginPage />} />
 
             <Route
               path="/dashboard"

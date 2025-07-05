@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
                 <h1 className="text-xl sm:text-2xl font-bold tracking-wide flex-shrink-0 mr-4">
                     <span className="hidden lg:inline">Health App</span>
                     <span className="hidden sm:inline lg:hidden">Health App</span>
-                    <span className="sm:hidden">BHIS</span>
+                    <span className="sm:hidden"><img src={"logo_bhis.png"} width={50} /></span>
                 </h1>
 
                 {/* Middle Section: Navigation Links (visible only on sm screens and above) */}

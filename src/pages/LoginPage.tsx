@@ -61,7 +61,8 @@ const LoginPage: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
             <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm text-center">
                 <div className="mb-6">
-                    <HeartPulse className="text-6xl text-blue-600 mx-auto mb-4" /> {/* Lucide icon */}
+                    {/*<HeartPulse className="text-6xl text-blue-600 mx-auto mb-4" />  Lucide icon */}
+                    <img src='logo_bhis.png' alt="BHIS Logo" className="w-24 h-24 mx-auto mb-4" />
                     <h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome to BHIS</h2>
                     <p className="text-gray-600">Barangay Health Information System</p>
                 </div>

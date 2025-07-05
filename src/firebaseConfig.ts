@@ -7,6 +7,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 const firebaseConfig = {
     apiKey: "AIzaSyCUiopxSFWv7GePQ0QyduGKwZgMDobQND4",
     authDomain: "bhis-d1e2b.firebaseapp.com",
+    // authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "bhis-d1e2b.web.app",
     projectId: "bhis-d1e2b",
     storageBucket: "bhis-d1e2b.firebasestorage.app",
     messagingSenderId: "815175833497",
