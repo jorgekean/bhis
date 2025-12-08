@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Jewelry Display</title>
+    <style>
+        /* CSS: Styling the layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #message-container {
+            text-align: center;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            font-size: 2.5rem; /* Adjustable size */
+            font-weight: 700;
+            line-height: 1.3;
+            color: #d63384; /* A nice "TikTok/Fashion" pinkish-red hue for emphasis */
+            opacity: 0; 
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Responsive text size for mobile screens */
+        @media (max-width: 600px) {
+            #message-container {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message-container">
+        </div>
+
+    <script>
+        // JAVASCRIPT: Your specific jewelry messages
+        const messages = [
+            "Top Trending Jewelry of 2025, Viral Fashion Accessories, Perfect for all OOTD",
+            "Awarded by Tiktok because of the superb/excellent quality but very affordable",
+            "Authentic Original Korean Items - if hindi nyo pa natry ang Korean gold, this is the time, you will not regret!",
+            "Non-tarnish, Non-fading, Hypoallergenic",
+            "Pwede sa sensitive ang skin, pasmado at acidic - kagaya ng Tita Arci",
+            "This is Pure Stainless Steel",
+            "Never nag green, hindi namumuti, never nangangalawang",
+            "Comment which item you want me to flex, ifleflex natin yan",
+            "Comment DONE CHECKOUT for priority shipping, mamaya or bukas ishiship agad",
+            "DO NOT CANCEL - pag nagcancel wala na freebies for life, promise worth it ang items, give this a chance"
+        ];
+
+        let currentIndex = 0;
+        const displayElement = document.getElementById('message-container');
+
+        function updateMessage() {
+            // Fade out
+            displayElement.style.opacity = 0;
+
+            // Wait 1s, change text, fade in
+            setTimeout(() => {
+                displayElement.innerText = messages[currentIndex];
+                currentIndex = (currentIndex + 1) % messages.length;
+                displayElement.style.opacity = 1;
+            }, 1000); 
+        }
+
+        // Show first message immediately
+        updateMessage();
+
+        // Change message every 7 seconds
+        setInterval(updateMessage, 7000); 
+
+    </script>
+</body>
+</html>
